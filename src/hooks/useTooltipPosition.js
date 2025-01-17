@@ -1,12 +1,12 @@
 import { useLayoutEffect, useState } from "react";
-import calculateTooltipPosition from "../utils/calculateTooltipPosition";
+import computeTooltipPosition from "../utils/computeTooltipPosition";
 
 // This hook return tooltip position state
-const useTooltipPosition = (parentRef) => {
+const useTooltipPosition = (parentRef,tooltipRef) => {
   const [tooltipPosition, setTooltipPosition] = useState(null);
   useLayoutEffect(() => {
-    setTooltipPosition(calculateTooltipPosition(parentRef));
-  },[parentRef]);
+    setTooltipPosition(computeTooltipPosition(window,parentRef,tooltipRef));
+  },[]);
   return tooltipPosition;
 };
 

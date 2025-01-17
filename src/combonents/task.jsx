@@ -5,8 +5,8 @@ import { useRef } from "react";
 import useTooltipPosition from "../hooks/useTooltipPosition";
 
 const Task = () => {
-  const parentRef = useRef(null);
-  const tooltipPosition = useTooltipPosition(parentRef);
+  // const parentRef = useRef(null);
+  // const tooltipPosition = useTooltipPosition(parentRef);
   // console.log(tooltipPosition);
   return (
     <div className="w-full flex flex-col items-stretch sm:flex-row bg-sky-400 rounded p-2 gap-2">
@@ -16,7 +16,7 @@ const Task = () => {
       </span>
       <div className="flex gap-1">
         <button
-          ref={parentRef}
+          // ref={parentRef}
           type="button"
           className="group relative w-1/2 sm:w-10 sm:h-10 sm:rounded-full py-1 text-center bg-white rounded"
         >

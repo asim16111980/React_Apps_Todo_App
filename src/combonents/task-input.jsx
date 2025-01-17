@@ -4,8 +4,9 @@ import useTooltipPosition from "../hooks/useTooltipPosition";
 
 const TaskInput = () => {
   const parentRef = useRef(null);
-  const tooltipPosition = useTooltipPosition(parentRef);
-  console.log(tooltipPosition);
+  const tooltipRef = useRef(null);
+  const tooltipPosition = useTooltipPosition(parentRef, tooltipRef);
+
   return (
     <div className="w-full flex flex-col sm:flex-row gap-2">
       <input
@@ -17,7 +18,11 @@ const TaskInput = () => {
         type="button"
         className="bg-sky-700 px-4 py-2 rounded relative group"
       >
-        <Tooltip text="Add new task" />
+        <Tooltip
+          text="Add new task"
+          position={tooltipPosition}
+          ref={tooltipRef}
+        />
         <span className="text-white text-base">Add</span>
       </button>
     </div>
