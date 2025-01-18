@@ -11,7 +11,7 @@ const TaskInput = () => {
     <div className="w-full flex flex-col sm:flex-row gap-2">
       <input
         type="text"
-        className="flex-1 ring-2 focus:ring-sky-500 ring-sky-400 outline-none rounded-sm px-2 py-1"
+        className="flex-1 border-2 border-sky-400 focus:border-sky-500  outline-none rounded px-2 py-1"
       />
       <button
         ref={parentRef}
