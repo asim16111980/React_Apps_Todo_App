@@ -6,7 +6,7 @@ const useTooltipPosition = (parentRef,tooltipRef) => {
   const [tooltipPosition, setTooltipPosition] = useState(null);
   useLayoutEffect(() => {
     setTooltipPosition(computeTooltipPosition(window,parentRef,tooltipRef));
-  },[]);
+  });
   return tooltipPosition;
 };
 

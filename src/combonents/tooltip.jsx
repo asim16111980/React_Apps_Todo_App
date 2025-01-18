@@ -4,7 +4,7 @@ const Tooltip = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className={`opacity-0 invisisble w-max h-max flex items-center group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute bg-transparent z-10 ${
+      className={`pointer-events-none opacity-0 invisisble w-max h-max flex items-center group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute bg-transparent z-10 ${
         props.position == "top"
           ? "flex-col bottom-[calc(100%-8px)] left-[50%] -translate-x-1/2"
           : props.position == "right"

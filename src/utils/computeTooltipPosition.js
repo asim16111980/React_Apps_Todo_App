@@ -4,20 +4,17 @@ const computeTooltipPosition = (viewport, parentRef, tooltipRef) => {
   const viewportHeight = viewport.innerHeight;
   const parentClientRect = parentRef.current.getBoundingClientRect();
   const tooltipClientRect = tooltipRef.current.getBoundingClientRect();
-
-  if (parentClientRect.top > tooltipClientRect.height + 16) {
+console.log(parentClientRect)
+  if (parentClientRect.top > tooltipClientRect.height) {
     return "top";
-  } else if (
-    viewportWidth - parentClientRect.right >
-    tooltipClientRect.width + 16
-  ) {
+  } else if (viewportWidth - parentClientRect.right > tooltipClientRect.width) {
     return "right";
   } else if (
     viewportHeight - parentClientRect.bottom >
-    tooltipClientRect.height + 16
+    tooltipClientRect.height
   ) {
     return "bottom";
-  } else if (parentClientRect.left > tooltipClientRect.width + 16) {
+  } else if (parentClientRect.left > tooltipClientRect.width) {
     return "left";
   }
 };
