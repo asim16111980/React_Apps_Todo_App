@@ -5,9 +5,9 @@ import { useRef } from "react";
 import useTooltipPosition from "../hooks/useTooltipPosition";
 
 const Task = () => {
-  const parentRef = useRef(null);
-  const tooltipRef = useRef(null);
-  const tooltipPosition = useTooltipPosition(parentRef, tooltipRef);
+  // const parentRef = useRef(null);
+  // const tooltipRef = useRef(null);
+  // const tooltipPosition = useTooltipPosition(parentRef, tooltipRef);
   return (
     <div className="w-full flex flex-col items-stretch sm:flex-row bg-sky-400 rounded p-2 gap-2">
       <span className="w-10 mx-auto h-10 bg-white rounded-full"></span>
@@ -16,30 +16,30 @@ const Task = () => {
       </span>
       <div className="flex gap-1">
         <button
-          ref={parentRef}
+          // ref={parentRef}
           type="button"
           className="group relative w-1/2 sm:w-10 sm:h-10 sm:rounded-full py-1 text-center bg-white rounded"
         >
-          <Tooltip
+          {/* <Tooltip
             text="Edit the task"
             ref={tooltipRef}
             position={tooltipPosition}
-          />
+          /> */}
           <span className="text-sky-950 flex justify-center items-center">
             <FontAwesomeIcon icon={faPen} className="hidden sm:block" />
             <span className="font-bold sm:hidden">Edit</span>
           </span>
         </button>
         <button
-          ref={parentRef}
+          // ref={parentRef}
           type="button"
           className="group relative w-1/2 sm:w-10 sm:h-10 sm:rounded-full py-1 text-center bg-white rounded"
         >
-          <Tooltip
+          {/* <Tooltip
             text="Delete the task"
             ref={tooltipRef}
             position={tooltipPosition}
-          />
+          /> */}
           <span className="text-sky-950 flex justify-center items-center">
             <FontAwesomeIcon icon={faTrash} className="hidden sm:block" />
             <span className="font-bold sm:hidden">Delete</span>

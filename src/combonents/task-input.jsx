@@ -16,7 +16,7 @@ const TaskInput = () => {
       <button
         ref={parentRef}
         type="button"
-        className="bg-sky-700 px-4 py-2 rounded relative group"
+        className="bg-sky-700 px-4 py-2 rounded group"
       >
         <Tooltip
           text="Add new task"

@@ -1,10 +1,10 @@
-// Function to compute tooltip position relative its parent (top, right, bottom or left)
-const computeTooltipPosition = (viewport, parentRef, tooltipRef) => {
+// Function to compute tooltip direction relative its parent (top, right, bottom or left)
+const computeTooltipDirection= (viewport, parentRef, tooltipRef) => {
   const viewportWidth = viewport.innerWidth;
   const viewportHeight = viewport.innerHeight;
   const parentClientRect = parentRef.current.getBoundingClientRect();
   const tooltipClientRect = tooltipRef.current.getBoundingClientRect();
-console.log(parentClientRect)
+
   if (parentClientRect.top > tooltipClientRect.height) {
     return "top";
   } else if (viewportWidth - parentClientRect.right > tooltipClientRect.width) {
@@ -19,4 +19,4 @@ console.log(parentClientRect)
   }
 };
 
-export default computeTooltipPosition;
+export default computeTooltipDirection;
