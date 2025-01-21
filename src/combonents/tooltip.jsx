@@ -8,7 +8,7 @@ const Tooltip = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className={`pointer-events-none scale-0 w-max h-max flex items-center group-hover:scale-100 transition-[transform] fixed bg-transparent z-10 ${
+      className={`pointer-events-none scale-0 w-max h-max flex items-center  transition-[transform] fixed bg-transparent z-10 ${
         direction === "top"
           ? `flex-col`
           : direction === "right"

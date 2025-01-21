@@ -34,7 +34,6 @@ const useTooltipPosition = (parentRef, tooltipRef) => {
       default:
         break;
     }
-    console.log(position.top,parentClientRect.top,direction);
     setTooltipPosition({
       direction: direction,
       top:position.top,
